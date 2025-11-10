@@ -1,0 +1,36 @@
+/* Trusted Section / Clients Styles */
+.trusted-section {
+  margin-top: 2rem;
+}
+
+.trusted-text {
+  font-family: 'Stack Sans Text', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.08em;
+  margin-bottom: 2rem;
+}
+
+.clients-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.client-logo {
+  height: 80px;
+  width: auto;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  filter: brightness(0) invert(1);
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.client-logo:hover {
+  opacity: 0.6;
+}

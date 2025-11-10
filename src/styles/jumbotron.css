@@ -1,0 +1,73 @@
+/* Jumbotron Styles */
+.jumbotron {
+  padding: 4rem 2rem 4rem;
+}
+
+.jumbotron-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jumbotron-title {
+  font-family: 'Krona One', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 400;
+  margin: 0 0 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 30%, #d4c5ff 50%, #ffffff 70%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 100% 100%;
+}
+
+.gradient-text {
+  /* gradient now applied to parent */
+}
+
+.jumbotron-description {
+  font-family: 'Stack Sans Text', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.btn-contact-large {
+  display: inline-block;
+  background-color: white;
+  color: #170533;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  font-family: 'Stack Sans Text', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.btn-contact-large:hover {
+  background-color: #e8e0ff;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.jumbotron-image {
+  margin: 1rem 0 0.5rem;
+}
+
+.jumbotron-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  mix-blend-mode: lighten;
+  opacity: 0.95;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}

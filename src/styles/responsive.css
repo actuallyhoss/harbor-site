@@ -1,0 +1,29 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .jumbotron-title {
+    font-size: 2rem;
+  }
+
+  .jumbotron-description {
+    font-size: 1rem;
+  }
+
+  .navbar-logo img {
+    height: 45px;
+  }
+
+  .btn-discord,
+  .btn-contact,
+  .btn-contact-large {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.8rem;
+  }
+
+  .clients-logos {
+    gap: 3rem;
+  }
+
+  .client-logo {
+    height: 60px;
+  }
+}

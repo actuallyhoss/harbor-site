@@ -1,0 +1,70 @@
+/* Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: transparent;
+  z-index: 1000;
+  padding: 2rem 0;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo a {
+  display: inline-block;
+  line-height: 0;
+}
+
+.navbar-logo img {
+  height: 70px;
+  width: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-discord {
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  font-family: 'Stack Sans Text', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-discord:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-contact {
+  background-color: white;
+  color: #170533;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  font-family: 'Stack Sans Text', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #e8e0ff;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
