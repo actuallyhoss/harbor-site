@@ -25,6 +25,10 @@ const clients = [
   { name: 'Mad Mushroom', logo: madMushroom },
   { name: 'nWay', logo: nway }
 ]
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 </script>
 
 <template>
@@ -220,6 +224,37 @@ const clients = [
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-tagline">
+          TAILORED TO YOU<br>
+          <span class="tagline-light">POWERED BY HARBOR</span>
+        </div>
+
+        <a href="#" class="footer-logo" @click.prevent="scrollToTop">
+          <img :src="harborIcon" alt="Harbor Icon" />
+        </a>
+
+        <div class="footer-links">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+
+        <div class="footer-social">
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Discord">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -227,6 +262,7 @@ const clients = [
 @import './styles/components.css';
 @import './styles/audience.css';
 @import './styles/features.css';
+@import './styles/footer.css';
 @import './styles/responsive.css';
 
 /* App Specific Styles */
