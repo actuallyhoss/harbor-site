@@ -6,6 +6,8 @@ import nzxt from './assets/clients/nzxt.png'
 import ccp from './assets/clients/ccp.png'
 import madMushroom from './assets/clients/mad-mushroom.png'
 import nway from './assets/clients/nway.png'
+import harborIcon from './assets/harbor-icon.svg'
+import audienceSvg from './assets/audience.svg'
 
 const clients = [
   { name: 'Limitbreak', logo: limitbreak },
@@ -64,13 +66,63 @@ const clients = [
         </div>
       </div>
     </section>
+
+    <!-- Audience Data Section -->
+    <section class="audience-section">
+      <div class="audience-container">
+        <h2 class="audience-title">
+          ALL YOUR AUDIENCE DATA<br>
+          IN ONE PLACE
+        </h2>
+
+        <div class="audience-visualization">
+          <!-- Connection Pills at Top -->
+          <div class="connection-pills">
+            <div class="pill">
+              <i class="fa-solid fa-users"></i>
+              <span>Social Media Platforms</span>
+            </div>
+            <div class="pill">
+              <i class="fa-solid fa-store"></i>
+              <span>Digital Storefronts</span>
+            </div>
+            <div class="pill">
+              <i class="fa-solid fa-plus"></i>
+              <span>Your Applications</span>
+            </div>
+          </div>
+
+          <!-- Connection Lines -->
+          <svg class="connection-lines" viewBox="0 0 900 250" preserveAspectRatio="xMidYMid meet">
+            <!-- Left line - from left pill to harbor icon -->
+            <path d="M 200 20 Q 200 125, 450 250" stroke="rgba(139, 92, 246, 0.4)" stroke-width="2" fill="none"/>
+            <!-- Middle line - from middle pill to harbor icon -->
+            <path d="M 450 5 L 450 250" stroke="rgba(139, 92, 246, 0.4)" stroke-width="2" fill="none"/>
+            <!-- Right line - from right pill to harbor icon -->
+            <path d="M 700 20 Q 700 125, 450 250" stroke="rgba(139, 92, 246, 0.4)" stroke-width="2" fill="none"/>
+          </svg>
+
+          <!-- Center Harbor Icon Box -->
+          <div class="harbor-icon-box">
+            <img :src="harborIcon" alt="Harbor Icon" class="harbor-icon" />
+          </div>
+
+          <!-- Radial Glow Background -->
+          <div class="radial-glow"></div>
+
+          <!-- Audience SVG -->
+          <div class="audience-image">
+            <img :src="audienceSvg" alt="Audience Data Visualization" />
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <style scoped>
-@import './styles/navbar.css';
-@import './styles/jumbotron.css';
-@import './styles/clients.css';
+@import './styles/components.css';
+@import './styles/audience.css';
 @import './styles/responsive.css';
 
 /* App Specific Styles */

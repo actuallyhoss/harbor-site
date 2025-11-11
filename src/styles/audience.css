@@ -1,0 +1,146 @@
+.audience-section {
+  width: 100%;
+  padding: 120px 20px;
+  background-color: #170533;
+  position: relative;
+  overflow: hidden;
+}
+
+.audience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.audience-title {
+  font-family: 'Krona One', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 80px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 30%, #d4c5ff 50%, #ffffff 70%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 100% 100%;
+  text-transform: uppercase;
+}
+
+.audience-visualization {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 800px;
+}
+
+.connection-pills {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 250px));
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 3;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.pill:nth-child(1) {
+  transform: translateY(15px);
+}
+
+.pill:nth-child(3) {
+  transform: translateY(15px);
+}
+
+.pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.pill i {
+  font-size: 1.1rem;
+  color: #a78bfa;
+}
+
+.connection-lines {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 250px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.harbor-icon-box {
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  padding: 18px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.harbor-icon {
+  width: 45px;
+  height: 45px;
+  display: block;
+}
+
+.radial-glow {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 1200px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.6) 0%, rgba(139, 92, 246, 0.35) 30%, rgba(139, 92, 246, 0.1) 50%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.audience-image {
+  position: absolute;
+  top: 205px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1400px;
+  z-index: 2;
+}
+
+.audience-image img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+

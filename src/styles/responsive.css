@@ -1,5 +1,10 @@
-/* Responsive Styles */
+/* =================================
+   TABLET & MOBILE RESPONSIVE STYLES
+   ================================= */
+
+/* Tablet (768px and below) */
 @media (max-width: 768px) {
+  /* Navbar */
   .navbar {
     padding: 1rem 0 1.5rem;
   }
@@ -8,6 +13,19 @@
     padding: 0 1rem;
   }
 
+  .navbar-logo img {
+    height: 52px;
+  }
+
+  /* Buttons */
+  .btn-discord,
+  .btn-contact,
+  .btn-contact-large {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.75rem;
+  }
+
+  /* Jumbotron */
   .jumbotron {
     padding: 2rem 1rem 4rem;
   }
@@ -20,22 +38,122 @@
     font-size: 1rem;
   }
 
-  .navbar-logo img {
-    height: 52px;
-  }
-
-  .btn-discord,
-  .btn-contact,
-  .btn-contact-large {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.75rem;
-  }
-
+  /* Clients Section */
   .clients-logos {
     gap: 3rem;
   }
 
   .client-logo {
     height: 60px;
+  }
+
+  /* Audience Section */
+  .audience-section {
+    padding: 80px 20px;
+  }
+
+  .audience-container {
+    max-width: 100%;
+  }
+
+  .audience-title {
+    font-size: 1.75rem;
+    margin-bottom: 60px;
+    line-height: 1.3;
+  }
+
+  .audience-visualization {
+    min-height: 700px;
+  }
+
+  .connection-pills {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .pill {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .pill:nth-child(1),
+  .pill:nth-child(3) {
+    transform: translateY(0);
+  }
+
+  .connection-lines {
+    display: none;
+  }
+
+  .harbor-icon-box {
+    top: 280px;
+    padding: 16px;
+  }
+
+  .harbor-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .radial-glow {
+    width: 600px;
+    height: 600px;
+    top: 55%;
+  }
+
+  .audience-image {
+    top: 340px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  /* Audience Section */
+  .audience-section {
+    padding: 60px 15px;
+  }
+
+  .audience-title {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    line-height: 1.3;
+  }
+
+  .audience-visualization {
+    min-height: 600px;
+  }
+
+  .pill {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    max-width: 100%;
+  }
+
+  .pill i {
+    font-size: 1rem;
+  }
+
+  .harbor-icon-box {
+    top: 240px;
+    padding: 12px;
+  }
+
+  .harbor-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .radial-glow {
+    width: 400px;
+    height: 400px;
+  }
+
+  .audience-image {
+    top: 300px;
   }
 }
