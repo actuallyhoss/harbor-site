@@ -8,6 +8,15 @@ import madMushroom from './assets/clients/mad-mushroom.png'
 import nway from './assets/clients/nway.png'
 import harborIcon from './assets/harbor-icon.svg'
 import audienceSvg from './assets/audience.svg'
+import visibilityIcon from './assets/harbor-visbility.svg'
+import segmentIcon from './assets/harbor-segment.svg'
+import analyticsIcon from './assets/harbor-analytics.svg'
+import economyIcon from './assets/harbor-economy.svg'
+import hubIcon from './assets/harbor-hub.svg'
+import questsIcon from './assets/harbor-quests.svg'
+import contentVisibility from './assets/content-visibility.webp'
+import contentSegmentation from './assets/content-segmentation.webp'
+import contentAnalytics from './assets/content-analytics.webp'
 
 const clients = [
   { name: 'Limitbreak', logo: limitbreak },
@@ -117,12 +126,107 @@ const clients = [
         </div>
       </div>
     </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="features-container">
+        <!-- Know Your People -->
+        <div class="feature-group">
+          <div class="section-label">
+            <span class="label-number">01</span>
+            <span class="label-text">KNOW YOUR PEOPLE</span>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon">
+                  <img :src="visibilityIcon" alt="Visibility" />
+                </div>
+                <h3 class="feature-title">Visibility</h3>
+              </div>
+              <p class="feature-description">See who's in your community across all platforms in real-time.</p>
+              <div class="feature-content-image">
+                <img :src="contentVisibility" alt="Visibility Content" />
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon">
+                  <img :src="segmentIcon" alt="Segmentation" />
+                </div>
+                <h3 class="feature-title">Segmentation</h3>
+              </div>
+              <p class="feature-description">Group your audience by behavior, activity, and engagement levels.</p>
+              <div class="feature-content-image">
+                <img :src="contentSegmentation" alt="Segmentation Content" />
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon">
+                  <img :src="analyticsIcon" alt="Analytics" />
+                </div>
+                <h3 class="feature-title">Analytics</h3>
+              </div>
+              <p class="feature-description">Track engagement metrics and make data-driven decisions.</p>
+              <div class="feature-content-image">
+                <img :src="contentAnalytics" alt="Analytics Content" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retain and Engage -->
+        <div class="feature-group">
+          <div class="section-label">
+            <span class="label-number">02</span>
+            <span class="label-text">RETAIN AND ENGAGE</span>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon">
+                  <img :src="economyIcon" alt="Economy" />
+                </div>
+                <h3 class="feature-title">Economy</h3>
+              </div>
+              <p class="feature-description">Create virtual currencies, rewards, and incentive systems.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon">
+                  <img :src="hubIcon" alt="Hub" />
+                </div>
+                <h3 class="feature-title">Hub</h3>
+              </div>
+              <p class="feature-description">Build customizable community hubs that match your brand.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon">
+                  <img :src="questsIcon" alt="Quests" />
+                </div>
+                <h3 class="feature-title">Quests</h3>
+              </div>
+              <p class="feature-description">Design interactive missions and challenges to boost engagement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <style scoped>
 @import './styles/components.css';
 @import './styles/audience.css';
+@import './styles/features.css';
 @import './styles/responsive.css';
 
 /* App Specific Styles */

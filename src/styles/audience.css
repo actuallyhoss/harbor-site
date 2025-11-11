@@ -1,9 +1,9 @@
 .audience-section {
   width: 100%;
   padding: 120px 20px;
-  background-color: #170533;
+  background: transparent;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .audience-container {
