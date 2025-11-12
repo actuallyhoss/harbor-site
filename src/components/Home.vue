@@ -1,5 +1,6 @@
 <script setup>
-import { inject, onMounted } from 'vue'
+import { inject } from 'vue'
+import { useHead } from '@vueuse/head'
 import logoSvg from '../assets/logo.svg'
 import harborMain from '../assets/harbor-main.png'
 import limitbreak from '../assets/clients/limitbreak.png'
@@ -19,6 +20,21 @@ import contentVisibility from '../assets/content-visibility.webp'
 import contentSegmentation from '../assets/content-segmentation.webp'
 import contentAnalytics from '../assets/content-analytics.webp'
 
+useHead({
+  title: 'Harbor - Community Experiences Reimagined',
+  meta: [
+    { name: 'description', content: 'Build engaging, gamified experiences for your digital communities. Create custom hubs, quests, and rewards without writing code.' },
+    { property: 'og:title', content: 'Harbor - Community Experiences Reimagined' },
+    { property: 'og:description', content: 'Build engaging, gamified experiences for your digital communities. Create custom hubs, quests, and rewards without writing code.' },
+    { property: 'og:url', content: 'https://harbor-site.pages.dev/' },
+    { property: 'twitter:title', content: 'Harbor - Community Experiences Reimagined' },
+    { property: 'twitter:description', content: 'Build engaging, gamified experiences for your digital communities. Create custom hubs, quests, and rewards without writing code.' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://harbor-site.pages.dev/' }
+  ]
+})
+
 const clients = [
   { name: 'Limitbreak', logo: limitbreak },
   { name: 'NZXT', logo: nzxt },
@@ -32,10 +48,6 @@ const openContactForm = inject('openContactForm')
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
-
-onMounted(() => {
-  document.title = 'Harbor - Community Experiences Reimagined'
-})
 </script>
 
 <template>
@@ -240,9 +252,9 @@ onMounted(() => {
           <span class="tagline-light">POWERED BY HARBOR</span>
         </div>
 
-        <a href="#" class="footer-logo" @click.prevent="scrollToTop">
+        <button type="button" class="footer-logo" @click="scrollToTop">
           <img :src="harborIcon" alt="Harbor Icon" />
-        </a>
+        </button>
 
         <div class="footer-links">
           <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="footer-link">Privacy Policy</a>

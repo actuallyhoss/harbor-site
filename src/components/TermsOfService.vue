@@ -69,11 +69,23 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { useHead } from '@vueuse/head'
 import LegalNav from './LegalNav.vue'
 
-onMounted(() => {
-  document.title = 'Terms of Service - Harbor'
+useHead({
+  title: 'Terms of Service - Harbor',
+  meta: [
+    { name: 'description', content: 'Terms of service for using Harbor and Windwalk Games Corp services.' },
+    { name: 'robots', content: 'index, follow' },
+    { property: 'og:title', content: 'Terms of Service - Harbor' },
+    { property: 'og:description', content: 'Terms of service for using Harbor and Windwalk Games Corp services.' },
+    { property: 'og:url', content: 'https://harbor-site.pages.dev/terms-of-service' },
+    { property: 'twitter:title', content: 'Terms of Service - Harbor' },
+    { property: 'twitter:description', content: 'Terms of service for using Harbor and Windwalk Games Corp services.' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://harbor-site.pages.dev/terms-of-service' }
+  ]
 })
 </script>
 

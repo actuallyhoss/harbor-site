@@ -233,11 +233,23 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { useHead } from '@vueuse/head'
 import LegalNav from './LegalNav.vue'
 
-onMounted(() => {
-  document.title = 'Privacy Policy - Harbor'
+useHead({
+  title: 'Privacy Policy - Harbor',
+  meta: [
+    { name: 'description', content: 'Harbor\'s privacy policy outlines how Windwalk Games Corp collects, uses, and protects your personal data.' },
+    { name: 'robots', content: 'index, follow' },
+    { property: 'og:title', content: 'Privacy Policy - Harbor' },
+    { property: 'og:description', content: 'Harbor\'s privacy policy outlines how Windwalk Games Corp collects, uses, and protects your personal data.' },
+    { property: 'og:url', content: 'https://harbor-site.pages.dev/privacy-policy' },
+    { property: 'twitter:title', content: 'Privacy Policy - Harbor' },
+    { property: 'twitter:description', content: 'Harbor\'s privacy policy outlines how Windwalk Games Corp collects, uses, and protects your personal data.' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://harbor-site.pages.dev/privacy-policy' }
+  ]
 })
 </script>
 

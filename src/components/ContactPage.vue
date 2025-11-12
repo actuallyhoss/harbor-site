@@ -14,12 +14,24 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { useHead } from '@vueuse/head'
 import LegalNav from './LegalNav.vue'
 import FormFields from './FormFields.vue'
 
-onMounted(() => {
-  document.title = 'Contact Us - Harbor'
+useHead({
+  title: 'Contact Us - Harbor',
+  meta: [
+    { name: 'description', content: 'Get in touch with Harbor. Let us help you build engaging, gamified experiences for your digital community.' },
+    { name: 'robots', content: 'index, follow' },
+    { property: 'og:title', content: 'Contact Us - Harbor' },
+    { property: 'og:description', content: 'Get in touch with Harbor. Let us help you build engaging, gamified experiences for your digital community.' },
+    { property: 'og:url', content: 'https://harbor-site.pages.dev/contact' },
+    { property: 'twitter:title', content: 'Contact Us - Harbor' },
+    { property: 'twitter:description', content: 'Get in touch with Harbor. Let us help you build engaging, gamified experiences for your digital community.' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://harbor-site.pages.dev/contact' }
+  ]
 })
 </script>
 
