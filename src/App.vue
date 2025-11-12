@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import logoSvg from './assets/logo.svg'
 import harborMain from './assets/harbor-main.png'
 import limitbreak from './assets/clients/limitbreak.png'
@@ -17,6 +18,7 @@ import questsIcon from './assets/harbor-quests.svg'
 import contentVisibility from './assets/content-visibility.webp'
 import contentSegmentation from './assets/content-segmentation.webp'
 import contentAnalytics from './assets/content-analytics.webp'
+import ContactForm from './components/ContactForm.vue'
 
 const clients = [
   { name: 'Limitbreak', logo: limitbreak },
@@ -25,6 +27,16 @@ const clients = [
   { name: 'Mad Mushroom', logo: madMushroom },
   { name: 'nWay', logo: nway }
 ]
+
+const isFormOpen = ref(false)
+
+const openContactForm = () => {
+  isFormOpen.value = true
+}
+
+const closeContactForm = () => {
+  isFormOpen.value = false
+}
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -42,8 +54,8 @@ const scrollToTop = () => {
           </a>
         </div>
         <div class="navbar-buttons">
-          <a href="#" class="btn-discord">JOIN OUR DISCORD &#8594;</a>
-          <a href="#" class="btn-contact">CONTACT US</a>
+          <a href="https://discord.gg/E2U6Ck77CR" target="_blank" rel="noopener noreferrer" class="btn-discord">JOIN OUR DISCORD &#8594;</a>
+          <button @click="openContactForm" class="btn-contact">CONTACT US</button>
         </div>
       </div>
     </nav>
@@ -59,7 +71,7 @@ const scrollToTop = () => {
         <p class="jumbotron-description">
           Build engaging, gamified experiences for your digital communities. Create custom hubs, quests, and rewards without writing code.
         </p>
-        <a href="#" class="btn-contact-large">CONTACT US</a>
+        <button @click="openContactForm" class="btn-contact-large">CONTACT US</button>
 
         <div class="jumbotron-image">
           <img :src="harborMain" alt="Harbor Platform" draggable="false" />
@@ -137,7 +149,7 @@ const scrollToTop = () => {
         <!-- Know Your People -->
         <div class="feature-group">
           <div class="section-label">
-            <span class="label-number">01</span>
+            <!-- <span class="label-number">01</span> -->
             <span class="label-text">KNOW YOUR PEOPLE</span>
           </div>
 
@@ -186,7 +198,7 @@ const scrollToTop = () => {
         <!-- Retain and Engage -->
         <div class="feature-group">
           <div class="section-label">
-            <span class="label-number">02</span>
+            <!-- <span class="label-number">02</span> -->
             <span class="label-text">RETAIN AND ENGAGE</span>
           </div>
 
@@ -238,23 +250,26 @@ const scrollToTop = () => {
         </a>
 
         <div class="footer-links">
-          <a href="#" class="footer-link">Privacy Policy</a>
-          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="https://harbor.gg/privacy-policy" target="_blank" rel="noopener noreferrer" class="footer-link">Privacy Policy</a>
+          <a href="https://harbor.gg/terms-of-service" target="_blank" rel="noopener noreferrer" class="footer-link">Terms of Service</a>
         </div>
 
         <div class="footer-social">
-          <a href="#" class="social-icon" aria-label="Twitter">
+          <a href="https://x.com/harbordotgg" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
             <i class="fa-brands fa-twitter"></i>
           </a>
-          <a href="#" class="social-icon" aria-label="Discord">
+          <a href="https://discord.gg/E2U6Ck77CR" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord">
             <i class="fa-brands fa-discord"></i>
           </a>
-          <a href="#" class="social-icon" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/windwalk/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
             <i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
       </div>
     </footer>
+
+    <!-- Contact Form -->
+    <ContactForm :isOpen="isFormOpen" @close="closeContactForm" />
   </div>
 </template>
 
