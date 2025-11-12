@@ -563,7 +563,8 @@ const handleSubmit = async () => {
 
   .close-btn {
     top: 16px;
-    left: 16px;
+    left: auto;
+    right: 16px;
   }
 }
 </style>

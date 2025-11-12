@@ -54,7 +54,7 @@ const scrollToTop = () => {
           </a>
         </div>
         <div class="navbar-buttons">
-          <a href="https://discord.gg/E2U6Ck77CR" target="_blank" rel="noopener noreferrer" class="btn-discord">JOIN OUR DISCORD &#8594;</a>
+          <a href="https://discord.gg/E2U6Ck77CR" target="_blank" rel="noopener noreferrer" class="btn-discord"><span>JOIN OUR DISCORD &#8594;</span></a>
           <button @click="openContactForm" class="btn-contact">CONTACT US</button>
         </div>
       </div>
