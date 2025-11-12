@@ -1,5 +1,3 @@
-import { Client } from '@notionhq/client';
-
 export async function onRequestPost(context) {
   // Handle CORS
   const corsHeaders = {
@@ -26,42 +24,61 @@ export async function onRequestPost(context) {
       );
     }
 
-    // Initialize Notion client with environment variable
-    const notion = new Client({
-      auth: context.env.NOTION_API_KEY
-    });
-
+    const notionApiKey = context.env.NOTION_API_KEY;
     const databaseId = context.env.NOTION_DATABASE_ID;
 
-    // Create page in Notion database
-    await notion.pages.create({
-      parent: { database_id: databaseId },
-      properties: {
-        'Full Name': {
-          rich_text: [{ text: { content: name } }]
-        },
-        'Please share your email': {
-          email: email
-        },
-        'Company': {
-          rich_text: [{ text: { content: company || '' } }]
-        },
-        'What industry is your Company focused on?': {
-          multi_select: [{ name: industry }]
-        },
-        'Tell us a little bit about what you are looking for!': {
-          rich_text: [{ text: { content: message } }]
-        },
-        'How did you hear about us?': {
-          multi_select: hearAboutUs && hearAboutUs.length > 0
-            ? hearAboutUs.map(item => ({ name: item }))
-            : []
-        },
-        'Submission time': {
-          date: { start: new Date().toISOString() }
+    // Create page in Notion database using fetch
+    const notionResponse = await fetch('https://api.notion.com/v1/pages', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${notionApiKey}`,
+        'Content-Type': 'application/json',
+        'Notion-Version': '2022-06-28'
+      },
+      body: JSON.stringify({
+        parent: { database_id: databaseId },
+        properties: {
+          'Full Name': {
+            rich_text: [{ text: { content: name } }]
+          },
+          'Please share your email': {
+            email: email
+          },
+          'Company': {
+            rich_text: [{ text: { content: company || '' } }]
+          },
+          'What industry is your Company focused on?': {
+            multi_select: [{ name: industry }]
+          },
+          'Tell us a little bit about what you are looking for!': {
+            rich_text: [{ text: { content: message } }]
+          },
+          'How did you hear about us?': {
+            multi_select: hearAboutUs && hearAboutUs.length > 0
+              ? hearAboutUs.map(item => ({ name: item }))
+              : []
+          },
+          'Submission time': {
+            date: { start: new Date().toISOString() }
+          }
         }
-      }
+      })
     });
+
+    if (!notionResponse.ok) {
+      const errorData = await notionResponse.text();
+      console.error('Notion API error:', errorData);
+      return new Response(
+        JSON.stringify({ error: 'Failed to submit to Notion', details: errorData }),
+        {
+          status: 500,
+          headers: {
+            'Content-Type': 'application/json',
+            ...corsHeaders
+          }
+        }
+      );
+    }
 
     return new Response(
       JSON.stringify({ success: true, message: 'Form submitted successfully' }),
