@@ -21,14 +21,14 @@ import contentSegmentation from '../assets/illustrations/content-segmentation.we
 import contentAnalytics from '../assets/illustrations/content-analytics.webp'
 
 useHead({
-  title: 'Harbor - Community Experiences Reimagined',
+  title: 'Harbor - Own Your Audience',
   meta: [
-    { name: 'description', content: 'Build engaging, gamified experiences for your digital communities. Create custom hubs, quests, and rewards without writing code.' },
-    { property: 'og:title', content: 'Harbor - Community Experiences Reimagined' },
-    { property: 'og:description', content: 'Build engaging, gamified experiences for your digital communities. Create custom hubs, quests, and rewards without writing code.' },
+    { name: 'description', content: 'Harbor is a CRM and marketing automation platform that connects all audience data into a singular source of truth through no-code gamified digital experiences.' },
+    { property: 'og:title', content: 'Harbor - Own Your Audience' },
+    { property: 'og:description', content: 'Harbor is a CRM and marketing automation platform that connects all audience data into a singular source of truth through no-code gamified digital experiences.' },
     { property: 'og:url', content: 'https://harbor-site.pages.dev/' },
-    { property: 'twitter:title', content: 'Harbor - Community Experiences Reimagined' },
-    { property: 'twitter:description', content: 'Build engaging, gamified experiences for your digital communities. Create custom hubs, quests, and rewards without writing code.' },
+    { property: 'twitter:title', content: 'Harbor - Own Your Audience' },
+    { property: 'twitter:description', content: 'Harbor is a CRM and marketing automation platform that connects all audience data into a singular source of truth through no-code gamified digital experiences.' },
   ],
   link: [
     { rel: 'canonical', href: 'https://harbor-site.pages.dev/' }
@@ -76,7 +76,7 @@ const scrollToTop = () => {
           <span class="gradient-text">REIMAGINED</span>
         </h1>
         <p class="jumbotron-description">
-          Build engaging, gamified experiences for your digital communities. Create custom hubs, quests, and rewards without writing code.
+          Harbor is a CRM and marketing automation platform that connects all audience data into a singular source of truth through no-code gamified digital experiences.
         </p>
         <button @click="openContactForm" class="btn-contact-large">CONTACT US</button>
 
@@ -153,91 +153,91 @@ const scrollToTop = () => {
     <!-- Features Section -->
     <section class="features-section">
       <div class="features-container">
-        <!-- Know Your People -->
+        <!-- Unique Digital Experiences -->
         <div class="feature-group">
           <div class="section-label">
             <!-- <span class="label-number">01</span> -->
-            <span class="label-text">KNOW YOUR PEOPLE</span>
+            <span class="label-text">UNIQUE DIGITAL EXPERIENCES</span>
           </div>
 
           <div class="features-grid">
             <div class="feature-card">
               <div class="feature-header">
                 <div class="feature-icon">
-                  <img :src="visibilityIcon" alt="Visibility" />
+                  <img :src="hubIcon" alt="No Code Hub" />
                 </div>
-                <h3 class="feature-title">Visibility</h3>
+                <h3 class="feature-title">No Code Hub</h3>
               </div>
-              <p class="feature-description">See who's in your community across all platforms in real-time.</p>
-              <div class="feature-content-image">
-                <img :src="contentVisibility" alt="Visibility Content" />
-              </div>
+              <p class="feature-description">Build customizable community hubs without writing a single line of code.</p>
             </div>
 
             <div class="feature-card">
               <div class="feature-header">
                 <div class="feature-icon">
-                  <img :src="segmentIcon" alt="Segmentation" />
+                  <img :src="economyIcon" alt="Gamified Modules" />
                 </div>
-                <h3 class="feature-title">Segmentation</h3>
+                <h3 class="feature-title">Tons of Gamified Modules</h3>
               </div>
-              <p class="feature-description">Group your audience by behavior, activity, and engagement levels.</p>
-              <div class="feature-content-image">
-                <img :src="contentSegmentation" alt="Segmentation Content" />
-              </div>
+              <p class="feature-description">Engage your audience with interactive quests, challenges, and gamified experiences.</p>
             </div>
 
             <div class="feature-card">
               <div class="feature-header">
                 <div class="feature-icon">
-                  <img :src="analyticsIcon" alt="Analytics" />
+                  <img :src="questsIcon" alt="Personalized Notifications" />
                 </div>
-                <h3 class="feature-title">Analytics</h3>
+                <h3 class="feature-title">Personalized Notifications</h3>
               </div>
-              <p class="feature-description">Track engagement metrics and make data-driven decisions.</p>
-              <div class="feature-content-image">
-                <img :src="contentAnalytics" alt="Analytics Content" />
-              </div>
+              <p class="feature-description">Send targeted messages and notifications based on user behavior and preferences.</p>
             </div>
           </div>
         </div>
 
-        <!-- Retain and Engage -->
+        <!-- Zero-Party Data -->
         <div class="feature-group">
           <div class="section-label">
             <!-- <span class="label-number">02</span> -->
-            <span class="label-text">RETAIN AND ENGAGE</span>
+            <span class="label-text">ZERO-PARTY DATA</span>
           </div>
 
           <div class="features-grid">
             <div class="feature-card">
               <div class="feature-header">
                 <div class="feature-icon">
-                  <img :src="economyIcon" alt="Economy" />
+                  <img :src="visibilityIcon" alt="Full Visibility" />
                 </div>
-                <h3 class="feature-title">Economy</h3>
+                <h3 class="feature-title">Full Visibility</h3>
               </div>
-              <p class="feature-description">Create virtual currencies, rewards, and incentive systems.</p>
+              <p class="feature-description">See who's in your community across all platforms in real-time with complete transparency.</p>
+              <div class="feature-content-image">
+                <img :src="contentVisibility" alt="Full Visibility Content" />
+              </div>
             </div>
 
             <div class="feature-card">
               <div class="feature-header">
                 <div class="feature-icon">
-                  <img :src="hubIcon" alt="Hub" />
+                  <img :src="segmentIcon" alt="Custom Segmentation" />
                 </div>
-                <h3 class="feature-title">Hub</h3>
+                <h3 class="feature-title">Custom Segmentation</h3>
               </div>
-              <p class="feature-description">Build customizable community hubs that match your brand.</p>
+              <p class="feature-description">Group your audience by behavior, activity, and custom attributes you define.</p>
+              <div class="feature-content-image">
+                <img :src="contentSegmentation" alt="Custom Segmentation Content" />
+              </div>
             </div>
 
             <div class="feature-card">
               <div class="feature-header">
                 <div class="feature-icon">
-                  <img :src="questsIcon" alt="Quests" />
+                  <img :src="analyticsIcon" alt="Deep Insights" />
                 </div>
-                <h3 class="feature-title">Quests</h3>
+                <h3 class="feature-title">Deep Insights</h3>
               </div>
-              <p class="feature-description">Design interactive missions and challenges to boost engagement.</p>
+              <p class="feature-description">Track engagement metrics and make data-driven decisions with powerful analytics.</p>
+              <div class="feature-content-image">
+                <img :src="contentAnalytics" alt="Deep Insights Content" />
+              </div>
             </div>
           </div>
         </div>
@@ -248,8 +248,8 @@ const scrollToTop = () => {
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-tagline">
-          TAILORED TO YOU<br>
-          <span class="tagline-light">POWERED BY HARBOR</span>
+          <span class="tagline-main">We're building the future of direct to consumer</span>
+          <span class="tagline-subtitle">Empowering digital enterprise to delight and deeply understand their audience.</span>
         </div>
 
         <button type="button" class="footer-logo" @click="scrollToTop">
