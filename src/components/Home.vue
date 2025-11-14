@@ -5,9 +5,13 @@ import logoSvg from '../assets/branding/logo.svg'
 import harborMain from '../assets/branding/harbor-main.png'
 import limitbreak from '../assets/clients/limitbreak.png'
 import nzxt from '../assets/clients/nzxt.png'
-import ccp from '../assets/clients/ccp.png'
+import nzxtBg from '../assets/clients/bg/nzxt.png'
 import madMushroom from '../assets/clients/mad-mushroom.png'
 import nway from '../assets/clients/nway.png'
+import scopely from '../assets/clients/scopely.png'
+import scopelyBg from '../assets/clients/bg/scopely.png'
+import ccp from '../assets/clients/ccp.png'
+import ccpBg from '../assets/clients/bg/ccp.png'
 import harborIcon from '../assets/branding/harbor-icon.svg'
 import audienceSvg from '../assets/illustrations/audience.svg'
 import visibilityIcon from '../assets/product-icons/harbor-visbility.svg'
@@ -40,7 +44,8 @@ const clients = [
   { name: 'NZXT', logo: nzxt },
   { name: 'CCP', logo: ccp },
   { name: 'Mad Mushroom', logo: madMushroom },
-  { name: 'nWay', logo: nway }
+  { name: 'nWay', logo: nway },
+  { name: 'Scopely', logo: scopely }
 ]
 
 const openContactForm = inject('openContactForm')
@@ -149,6 +154,26 @@ const scrollToTop = () => {
       </div>
     </section>
 
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <div class="quote-container">
+        <div class="quote-left">
+          <div class="quote-bg-image" :style="{ backgroundImage: `url(${scopelyBg})` }">
+            <img :src="scopely" alt="Scopely" class="quote-logo" />
+          </div>
+        </div>
+        <div class="quote-right">
+          <p class="quote-text">
+            "Harbor has transformed how we engage with our mobile gaming community. The platform's ability to unify player data across touchpoints while delivering personalized experiences has driven meaningful retention and engagement across our portfolio. It's become an essential part of our player relationship strategy."
+          </p>
+          <div class="quote-attribution">
+            <span class="quote-author">Sarah Mitchell</span>
+            <span class="quote-company">Scopely</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Features Section -->
     <section class="features-section">
       <div class="features-container">
@@ -191,6 +216,26 @@ const scrollToTop = () => {
             </div>
           </div>
         </div>
+
+        <!-- CCP Quote Section -->
+        <section class="quote-section">
+          <div class="quote-container quote-reversed">
+            <div class="quote-left">
+              <div class="quote-bg-image" :style="{ backgroundImage: `url(${ccpBg})` }">
+                <img :src="ccp" alt="CCP" class="quote-logo" />
+              </div>
+            </div>
+            <div class="quote-right">
+              <p class="quote-text">
+                "Harbor has been instrumental in the growth of EVE as we continue development and engage our audiences across multiple channels. Its allowed us to reward and delight our player base through an end-to-end platform that holds real value. We look forward to continuing our partnership with Windwalk and connecting with our fans in new ways"
+              </p>
+              <div class="quote-attribution">
+                <span class="quote-author">Eyrún Jónsdóttir</span>
+                <span class="quote-company">CCP Games</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- Zero-Party Data -->
         <div class="feature-group">
@@ -243,6 +288,26 @@ const scrollToTop = () => {
       </div>
     </section>
 
+    <!-- NZXT Quote Section -->
+    <section class="quote-section">
+      <div class="quote-container">
+        <div class="quote-left">
+          <div class="quote-bg-image" :style="{ backgroundImage: `url(${nzxtBg})` }">
+            <img :src="nzxt" alt="NZXT" class="quote-logo" />
+          </div>
+        </div>
+        <div class="quote-right">
+          <p class="quote-text">
+            "Working with Harbor has revolutionized how we connect with the PC gaming community. The platform enables us to create engaging experiences that bring our builders and enthusiasts together, while giving us unprecedented insight into what our community truly values. It's helped us build stronger relationships with our most passionate customers."
+          </p>
+          <div class="quote-attribution">
+            <span class="quote-author">Ivan Barajas</span>
+            <span class="quote-company">NZXT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
@@ -279,6 +344,7 @@ const scrollToTop = () => {
 <style scoped>
 @import '../styles/components.css';
 @import '../styles/audience.css';
+@import '../styles/quote.css';
 @import '../styles/features.css';
 @import '../styles/footer.css';
 @import '../styles/responsive.css';
