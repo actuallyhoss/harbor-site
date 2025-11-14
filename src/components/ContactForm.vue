@@ -1,20 +1,18 @@
 <template>
   <Transition name="overlay">
     <div v-if="isOpen" class="form-overlay" @click="closeForm">
-      <Transition name="slide">
-        <div v-if="isOpen" class="form-container" @click.stop>
-          <button class="close-btn" @click="closeForm" aria-label="Close form">
-            ×
-          </button>
+      <div class="form-container" @click.stop>
+        <button class="close-btn" @click="closeForm" aria-label="Close form">
+          ×
+        </button>
 
-          <div class="form-header">
-            <h2>GET STARTED WITH HARBOR</h2>
-            <p>Fill out the form below and we'll get back to you shortly.</p>
-          </div>
-
-          <FormFields @submitted="handleFormSubmitted" />
+        <div class="form-header">
+          <h2>GET STARTED WITH HARBOR</h2>
+          <p>Fill out the form below and we'll get back to you shortly.</p>
         </div>
-      </Transition>
+
+        <FormFields @submitted="handleFormSubmitted" />
+      </div>
     </div>
   </Transition>
 </template>
@@ -53,19 +51,12 @@ watch(() => props.isOpen, (isOpen) => {
     const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = 'hidden';
     document.body.style.paddingRight = `${scrollbarWidth}px`;
-
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-      navbar.style.paddingRight = `${scrollbarWidth}px`;
-    }
   } else {
-    document.body.style.overflow = '';
-    document.body.style.paddingRight = '';
-
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-      navbar.style.paddingRight = '';
-    }
+    // Delay removing overflow until after the closing animation completes (300ms)
+    setTimeout(() => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }, 300);
   }
 });
 
@@ -102,7 +93,6 @@ onUnmounted(() => {
   max-width: 50%;
   min-height: 100vh;
   background: #0f0527;
-  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
   padding: 100px 60px 60px;
   z-index: 9999;
 }
@@ -170,7 +160,10 @@ onUnmounted(() => {
   font-family: 'Stack Sans Text', sans-serif;
 }
 
-.overlay-enter-active,
+.overlay-enter-active {
+  transition: opacity 0.3s ease;
+}
+
 .overlay-leave-active {
   transition: opacity 0.3s ease;
 }
@@ -180,20 +173,20 @@ onUnmounted(() => {
   opacity: 0;
 }
 
-.slide-enter-active {
+.overlay-enter-active .form-container {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.slide-leave-active {
+.overlay-leave-active .form-container {
   transition: transform 0.3s cubic-bezier(0.6, 0, 0.8, 0.2);
 }
 
-.slide-enter-from {
-  transform: translateX(-100%);
+.overlay-enter-from .form-container {
+  transform: translateX(100%);
 }
 
-.slide-leave-to {
-  transform: translateX(-100%);
+.overlay-leave-to .form-container {
+  transform: translateX(100%);
 }
 
 @media (max-width: 1200px) {

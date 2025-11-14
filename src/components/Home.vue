@@ -71,9 +71,8 @@ const scrollToTop = () => {
     <section class="jumbotron">
       <div class="jumbotron-container">
         <h1 class="jumbotron-title">
-          <span class="gradient-text">COMMUNITY</span><br>
-          <span class="gradient-text">EXPERIENCES</span><br>
-          <span class="gradient-text">REIMAGINED</span>
+          <span class="gradient-text">OWN YOUR</span><br>
+          <span class="gradient-text">AUDIENCE</span><br>
         </h1>
         <p class="jumbotron-description">
           Harbor is a CRM and marketing automation platform that connects all audience data into a singular source of truth through no-code gamified digital experiences.
