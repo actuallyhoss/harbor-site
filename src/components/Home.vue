@@ -216,27 +216,32 @@ const scrollToTop = () => {
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- CCP Quote Section -->
-        <section class="quote-section">
-          <div class="quote-container quote-reversed">
-            <div class="quote-left">
-              <div class="quote-bg-image" :style="{ backgroundImage: `url(${ccpBg})` }">
-                <img :src="ccp" alt="CCP" class="quote-logo" />
-              </div>
-            </div>
-            <div class="quote-right">
-              <p class="quote-text">
-                "Harbor has been instrumental in the growth of EVE as we continue development and engage our audiences across multiple channels. Its allowed us to reward and delight our player base through an end-to-end platform that holds real value. We look forward to continuing our partnership with Windwalk and connecting with our fans in new ways"
-              </p>
-              <div class="quote-attribution">
-                <span class="quote-author">Eyrún Jónsdóttir</span>
-                <span class="quote-company">CCP Games</span>
-              </div>
-            </div>
+    <!-- CCP Quote Section -->
+    <section class="quote-section">
+      <div class="quote-container quote-reversed">
+        <div class="quote-left">
+          <div class="quote-bg-image" :style="{ backgroundImage: `url(${ccpBg})` }">
+            <img :src="ccp" alt="CCP" class="quote-logo" />
           </div>
-        </section>
+        </div>
+        <div class="quote-right">
+          <p class="quote-text">
+            "Harbor has been instrumental in the growth of EVE as we continue development and engage our audiences across multiple channels. Its allowed us to reward and delight our player base through an end-to-end platform that holds real value. We look forward to continuing our partnership with Windwalk and connecting with our fans in new ways"
+          </p>
+          <div class="quote-attribution">
+            <span class="quote-author">Eyrún Jónsdóttir</span>
+            <span class="quote-company">CCP Games</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="features-container">
         <!-- Zero-Party Data -->
         <div class="feature-group">
           <div class="section-label">

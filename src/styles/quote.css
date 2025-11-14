@@ -8,6 +8,7 @@
 .quote-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -106,9 +107,14 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .quote-section {
+    margin: 80px 0;
+  }
+
   .quote-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 
   .quote-left {
@@ -116,16 +122,42 @@
   }
 
   .quote-logo {
-    height: 70px;
+    height: 50px;
+  }
+
+  .quote-right {
+    gap: 1rem;
   }
 
   .quote-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .quote-attribution {
+    gap: 0.4rem;
   }
 
   .quote-author,
   .quote-separator,
   .quote-company {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .quote-left {
+    order: 1;
+  }
+
+  .quote-right {
+    order: 2;
+  }
+
+  .quote-reversed .quote-left {
+    order: 1;
+    justify-self: start;
+  }
+
+  .quote-reversed .quote-right {
+    order: 2;
   }
 }
