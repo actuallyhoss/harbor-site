@@ -23,6 +23,9 @@ import questsIcon from '../assets/product-icons/harbor-quests.svg'
 import contentVisibility from '../assets/illustrations/content-visibility.webp'
 import contentSegmentation from '../assets/illustrations/content-segmentation.webp'
 import contentAnalytics from '../assets/illustrations/content-analytics.webp'
+import contentHub from '../assets/illustrations/content-hub.webp'
+import contentGamification from '../assets/illustrations/content-gamification.webp'
+import contentNotifications from '../assets/illustrations/content-notifications.webp'
 
 useHead({
   title: 'Harbor - Own Your Audience',
@@ -193,6 +196,9 @@ const scrollToTop = () => {
                 <h3 class="feature-title">No Code Hub</h3>
               </div>
               <p class="feature-description">Build customizable community hubs without writing a single line of code.</p>
+              <div class="feature-content-image">
+                <img :src="contentHub" alt="No Code Hub Content" />
+              </div>
             </div>
 
             <div class="feature-card">
@@ -203,6 +209,9 @@ const scrollToTop = () => {
                 <h3 class="feature-title">Tons of Gamified Modules</h3>
               </div>
               <p class="feature-description">Engage your audience with interactive quests, challenges, and gamified experiences.</p>
+              <div class="feature-content-image">
+                <img :src="contentGamification" alt="Gamified Modules Content" />
+              </div>
             </div>
 
             <div class="feature-card">
@@ -213,6 +222,9 @@ const scrollToTop = () => {
                 <h3 class="feature-title">Personalized Notifications</h3>
               </div>
               <p class="feature-description">Send targeted messages and notifications based on user behavior and preferences.</p>
+              <div class="feature-content-image">
+                <img :src="contentNotifications" alt="Personalized Notifications Content" />
+              </div>
             </div>
           </div>
         </div>
