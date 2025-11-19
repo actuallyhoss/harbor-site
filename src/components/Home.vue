@@ -315,7 +315,7 @@ const scrollToTop = () => {
         </div>
         <div class="quote-right">
           <p class="quote-text">
-            "Working with Harbor has revolutionized how we connect with the PC gaming community. The platform enables us to create engaging experiences that bring our builders and enthusiasts together, while giving us unprecedented insight into what our community truly values. It's helped us build stronger relationships with our most passionate customers."
+            "Harbor has been a huge part of our growth this year. Their platform hasn’t just helped us scale our community, it’s helped us keep people genuinely engaged with meaningful activities and rewards. Because of that engagement, we’ve been able to show real value to our partners and secure new brand relationships that see the benefit of connecting with a passionate, active audience. Harbor has become a core part of how we build, nurture, and grow the NZXT community."
           </p>
           <div class="quote-attribution">
             <span class="quote-author">Ivan Barajas</span>
