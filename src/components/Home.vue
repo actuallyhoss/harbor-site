@@ -333,6 +333,8 @@ const scrollToTop = () => {
           <span class="tagline-subtitle">Empowering digital enterprise to delight and deeply understand their audience.</span>
         </div>
 
+        <button @click="openContactForm" class="footer-contact-btn">CONTACT US</button>
+
         <button type="button" class="footer-logo" @click="scrollToTop">
           <img :src="harborIcon" alt="Harbor Icon" />
         </button>
